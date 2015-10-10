@@ -1,0 +1,47 @@
+
+<link rel='import' href='../../bower_components/polymer/polymer.html'/>
+
+<link rel='import' href='../../bower_components/paper-toolbar/paper-toolbar.html'/>
+<link rel='import' href='../../bower_components/paper-icon-button/paper-icon-button.html'/>
+
+<link rel='import' href='../../bower_components/iron-icons/iron-icons.html'/>
+
+<dom-module id='site-page'>
+	
+	<template>
+
+		<style>
+			:host {
+				@apply(--layout-fit);
+				background-color: var(--primary-background-color);
+				color: var(--primary-text-color);
+			}
+
+			#page-content {
+				@apply(--layout-flex);
+				@apply(--layout-vertical);
+				@apply(--layout-center-center);
+			}
+
+		</style>
+
+		<paper-header-panel class='fit layout vertical'>
+			
+			<paper-toolbar> 
+				<h1> smile please </h1>
+			</paper-toolbar>
+			
+			<div id='page-content'>
+				<content></content>
+			</div>
+
+		</paper-header-panel>
+	</template>
+	
+	<script>
+		Polymer({
+			is: "site-page"
+		});
+	</script>
+
+</dom-module>
